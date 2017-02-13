@@ -153,6 +153,54 @@ $$\phi_j = \phi_j$$
 
 \pagebreak
 
-$$\frac{\delta\phi}{\delta x} = $$
+$$\frac{\delta\phi}{\delta x} = \left(\alpha_1 + \alpha_2 + \alpha_3 + \alpha_4 + \alpha_5\right)\phi_j$$
+
+$$+ \left(4\alpha_1 + 3\alpha_2 + 2\alpha_3 + \alpha_4\right)h_1{\phi_j}'$$
+
+$$+ \left(16\alpha_1 + 9\alpha_2 + 4\alpha_3 + \alpha_4\right)\frac{h_1\left(h_1 + h_2\right)}{2}{\phi_j}''$$
+
+$$+ \left(64\alpha_1 + 27\alpha_2 + 8\alpha_3 + \alpha_4\right)\frac{h_1\left(h_1 + h_2\right)\left(h_1 + h_2 + h_3\right)}{6}{\phi_j}'''$$
+
+$$+ \left(256\alpha_1 + 81\alpha_2 + 16\alpha_3 + \alpha_4\right)\frac{h_1\left(h_1 + h_2\right)\left(h_1 + h_2 + h_3\right)\left(h_1 + h_2 + h_3 + h_4\right)}{24}{\phi_j}''''$$
+
+$$\Rightarrow \alpha_1 + \alpha_2 + \alpha_3 + \alpha_4 + \alpha_5 = 0$$
+
+$$\left(4\alpha_1 + 3\alpha_2 + 2\alpha_3 + \alpha_4\right)h_1 = 1$$
+
+$$16\alpha_1 + 9\alpha_2 + 4\alpha_3 + \alpha_4 = 0$$
+
+$$64\alpha_1 + 27\alpha_2 + 8\alpha_3 + \alpha_4 = 0$$
+
+$$256\alpha_1 + 81\alpha_2 + 16\alpha_3 + \alpha_4 = 0$$
+
+$$\begin{bmatrix}
+1 & 1 & 1 & 1 & 1 \\
+4 & 3 & 2 & 1 & 0 \\
+16 & 9 & 4 & 1 & 0 \\
+64 & 27 & 8 & 1 & 0 \\
+256 & 81 & 16 & 1 & 0
+\end{bmatrix}
+\begin{bmatrix}
+\alpha_1 \\ \alpha_2 \\ \alpha_3 \\ \alpha_4 \\ \alpha_5
+\end{bmatrix} = 
+\begin{bmatrix}
+0 \\ \frac{1}{h} \\ 0 \\ 0 \\ 0
+\end{bmatrix}$$
+
+\pagebreak
+
+$$\Rightarrow \begin{bmatrix}
+\alpha_1 \\ \alpha_2 \\ \alpha_3 \\ \alpha_4 \\ \alpha_5
+\end{bmatrix} = 
+\begin{bmatrix}
+0 & -\frac{1}{4} & \frac{11}{24} & -\frac{1}{4} & \frac{1}{24} \\
+0 & \frac{4}{3} & -\frac{7}{3} & \frac{7}{6} & -\frac{1}{6} \\
+0 & -3 & \frac{19}{4} & -2 & \frac{1}{4} \\
+0 & 4 & -\frac{13}{3} & \frac{3}{2} & -\frac{1}{6} \\
+1 & -\frac{25}{12} & \frac{35}{24} & -\frac{5}{12} & \frac{1}{24} 
+\end{bmatrix}
+\begin{bmatrix}
+0 \\ \frac{1}{h} \\ 0 \\ 0 \\ 0
+\end{bmatrix}$$
 \end{enumerate}
 \end{document}
