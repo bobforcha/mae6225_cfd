@@ -184,7 +184,7 @@ $$\begin{bmatrix}
 \alpha_1 \\ \alpha_2 \\ \alpha_3 \\ \alpha_4 \\ \alpha_5
 \end{bmatrix} = 
 \begin{bmatrix}
-0 \\ \frac{1}{h} \\ 0 \\ 0 \\ 0
+0 \\ \frac{1}{h_1} \\ 0 \\ 0 \\ 0
 \end{bmatrix}$$
 
 \pagebreak
@@ -200,7 +200,13 @@ $$\Rightarrow \begin{bmatrix}
 1 & -\frac{25}{12} & \frac{35}{24} & -\frac{5}{12} & \frac{1}{24} 
 \end{bmatrix}
 \begin{bmatrix}
-0 \\ \frac{1}{h} \\ 0 \\ 0 \\ 0
+0 \\ \frac{1}{h_1} \\ 0 \\ 0 \\ 0
 \end{bmatrix}$$
+
+$$= \begin{bmatrix}
+-\frac{1}{4h_1} \\ \frac{4}{3h_1} \\ -\frac{3}{h_1} \\ \frac{4}{h_1} \\ -\frac{25}{12h_1}
+\end{bmatrix}$$
+
+$$\frac{\delta\phi}{\delta x} = \frac{-3\phi_{j+4} + 16\phi_{j+3} - 36\phi_{j+2} + 48\phi_{j+1} - 25\phi_{j}}{12h_1} + o\left(h^4\right)$$
 \end{enumerate}
 \end{document}
