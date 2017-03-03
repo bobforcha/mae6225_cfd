@@ -9,16 +9,29 @@
 \begin{titlepage}
 \maketitle
 \end{titlepage}
-\section{Introduction}
-\text{The aim of this assignment was to numerically approximate solutions to the Poisson equation.}
-\section{Methods}
-\text{This is where the methods section will go.}
+\paragraph{The aim of this assignment was to numerically approximate solutions to the Poisson equation
+with some stuff.}
+\section{Discretization of the Poisson Equation}
+The Poisson equation, $\nabla^2u = f\left(x,y\right)$, was discretized as follows:
+$$u_{xx} + u_{yy} = f\left(x,y\right)$$
+$$u_{xx}\approx\frac{1}{\Delta x^2}\left(u_{i+1,j} - 2u_{i,j} + u_{i-1,j}\right)$$
+$$u_{yy}\approx\frac{1}{\Delta y^2}\left(u_{i,j+1} - 2u_{i,j} + u_{i,j-1}\right)$$
+For a uniform grid, $\Delta y = \Delta x = h$:
+$$\frac{1}{h^2}\left(u_{i+1,j} - 4u_{i,j} + u_{i-1,j} + u_{i,j+1} + u_{i,j-1}\right)
+= f\left(x_i,y_j\right)$$
+$$A\mathbf{u} = \mathbf{f}$$
+$$\mathbf{u} =\left(u_{1,1},...,u_{I,1},...,u_{i,j},...,u_{1,J},...,u_{I,J}\right)$$
+$$u_{i,j} = \frac{1}{4}\left[u_{i-1,j} + u_{i+1,j} + u_{i,j-1} + u_{i,j+1}\right]
+ - \frac{h^2}{4}f\left(i,j\right)$$
+\section{Comparison with Exact Solution, Dirichlet Boundary Conditions}
+\text{Given the exact solution:}
+$$u_{ex}\left(x,y\right) = \sin\left(2\pi n x\right)\sin\left(2\pi n y\right)$$
 \subsection{Jacobi Method}
 \text{stuff.}
 \subsection{Successive Over Relaxation (SOR)}
 \text{other stuff}
-\section{Results}
-\text{This is where the results will go.}
-\section{Conclusions}
-\text{This is where the conclusions will go.}
+\section{Grid Refinement Study}
+\text{This is where the grid refinement study results will go.}
+\section{Neumann Boundary Conditions}
+\text{Do it all again!}
 \end{document}
